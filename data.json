@@ -1,0 +1,40 @@
+{
+  "winners": [
+    {
+      "name": "Aryan Sharma",
+      "month": "2025-08",  
+      "category": "Junior",
+      "photo": "images/winner1.jpg"
+    },
+    {
+      "name": "Sneha Iyer",
+      "month": "2025-08",
+      "category": "Intermediate",
+      "photo": "images/winner2.jpg"
+    },
+    {
+      "name": "Vikram Singh",
+      "month": "2025-08",
+      "category": "Advanced",
+      "photo": "images/winner3.jpg"
+    },
+    {
+      "name": "Rahul Nair",
+      "month": "2025-07",
+      "category": "Advanced",
+      "photo": "images/winner4.jpg"
+    }
+  ],
+  "fidePlayers": [
+    {
+      "name": "Karthik R",
+      "rating": 1450,
+      "photo": "images/player1.jpg"
+    },
+    {
+      "name": "Riya Menon",
+      "rating": 1620,
+      "photo": "images/player2.jpg"
+    }
+  ]
+}
