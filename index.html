@@ -57,8 +57,7 @@
   <p class="mb-6 text-gray-400">Try solving today’s challenge right here!</p>
 
   <!-- Puzzle Board -->
-  <div id="board" class="mx-auto" style="width: 400px"></div>
-
+  <div id="board" class="mx-auto bg-gray-800 rounded-lg" style="width: 400px; height: 400px;"></div>
   <p id="puzzle-status" class="mt-4 text-gray-400"></p>
 
   <p class="mt-6 text-gray-500 text-sm">
@@ -66,48 +65,40 @@
   </p>
 </section>
 
-<!-- Chessboard.js & Chess.js Libraries -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
 
 <script>
-  // Create chess game logic
   let game = new Chess();
   let board = null;
   let solution = [];
   let moveIndex = 0;
 
-  // Fetch daily puzzle from Lichess API
-  fetch("https://lichess.org/api/puzzle/daily")
-    .then(res => res.json())
-    .then(data => {
-      let fen = data.game.fen;
-      solution = data.puzzle.solution; // Solution moves in SAN notation
-      game.load(fen);
+  // Local fallback puzzle (if API fails due to CORS)
+  const fallbackPuzzle = {
+    fen: "r1bqkb1r/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4",
+    solution: ["Nc3", "Nf6", "d3"]
+  };
 
-      // Initialize board
-      board = Chessboard('board', {
-        draggable: true,
-        position: fen,
-        onDrop: onDrop
-      });
+  function initBoard(fen, sol) {
+    game.load(fen);
+    solution = sol;
+    moveIndex = 0;
 
-      document.getElementById("puzzle-status").innerText = 
-        "Your turn! Find the best move...";
+    board = Chessboard('board', {
+      draggable: true,
+      position: fen,
+      onDrop: onDrop
     });
 
-  // Handle piece drop
+    document.getElementById("puzzle-status").innerText = "Your turn! Find the best move...";
+  }
+
   function onDrop(source, target) {
-    let move = game.move({
-      from: source,
-      to: target,
-      promotion: "q" // auto promote to queen
-    });
+    const move = game.move({ from: source, to: target, promotion: "q" });
+    if (move === null) return "snapback";
 
-    if (move === null) return "snapback"; // illegal move
-
-    // Check if move is correct
     if (move.san === solution[moveIndex]) {
       moveIndex++;
       if (moveIndex === solution.length) {
@@ -117,10 +108,19 @@
       }
     } else {
       document.getElementById("puzzle-status").innerText = "❌ Wrong move. Try again!";
-      game.undo(); // undo wrong move
+      game.undo();
       board.position(game.fen());
     }
   }
+
+  // Try fetching from Lichess API
+  fetch("https://lichess.org/api/puzzle/daily")
+    .then(res => res.json())
+    .then(data => initBoard(data.game.fen, data.puzzle.solution))
+    .catch(err => {
+      console.warn("API failed, using fallback puzzle.", err);
+      initBoard(fallbackPuzzle.fen, fallbackPuzzle.solution);
+    });
 </script>
 
 
