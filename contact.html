@@ -3,44 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Chess Academy</title>
+  <title>Contact Us - Chess Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-black font-sans">
+<body class="bg-black text-white font-sans">
+  <!-- Navbar -->
+  <header class="bg-black text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo placeholder -->
+      <div class="text-xl font-bold">Chess Academy</div>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="achievements.html" class="hover:underline">Achievements</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="flex justify-between items-center px-6 py-4 border-b border-gray-300">
-  <div class="flex items-center space-x-2">
-    <div class="w-12 h-12 bg-gray-300 flex items-center justify-center text-black font-bold">Logo</div>
-    <span class="text-xl font-semibold">Chess Academy</span>
-  </div>
-  <nav class="space-x-6">
-    <a href="index.html" class="hover:text-gray-500">Home</a>
-    <a href="gallery.html" class="hover:text-gray-500">Gallery</a>
-    <a href="achievements.html" class="hover:text-gray-500">Achievements</a>
-    <a href="contact.html" class="hover:text-gray-500">Contact</a>
-  </nav>
-</header>
+  <!-- WhatsApp Contact Section -->
+  <section class="max-w-2xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">Contact Us via WhatsApp</h2>
+    <p class="mb-6">Click the button below to message us directly on WhatsApp!</p>
+    <a href="https://wa.me/YOUR_NUMBER" target="_blank" 
+       class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition text-lg inline-block">
+      Chat on WhatsApp
+    </a>
+  </section>
 
-<section class="max-w-2xl mx-auto py-16 px-6">
-  <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/YOUR_NUMBER" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.81 11.81 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.09 1.52 5.82L0 24l6.39-1.67A11.92 11.92 0 0012 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.22-3.48-8.52zM12 22.08c-1.96 0-3.81-.52-5.44-1.5l-.39-.23-3.8.99.99-3.7-.25-.39A9.98 9.98 0 012.08 12c0-5.52 4.48-10 10-10 2.66 0 5.17 1.04 7.07 2.93A9.94 9.94 0 0122.08 12c0 5.52-4.48 10-10 10zm5.22-7.22c-.28-.14-1.64-.81-1.89-.91-.25-.1-.43-.14-.61.14-.18.28-.7.91-.86 1.1-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.1-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.04-.22-.54-.44-.47-.61-.48-.16 0-.34-.02-.52-.02s-.48.07-.73.34c-.25.28-.95.92-.95 2.25s.97 2.61 1.11 2.79c.14.18 1.93 2.95 4.68 4.14 2.75 1.18 2.75.79 3.24.74.48-.05 1.56-.64 1.78-1.26.22-.61.22-1.13.16-1.26-.05-.14-.18-.22-.37-.36z"/>
+    </svg>
+  </a>
 
-  <div class="bg-gray-100 p-8 rounded shadow">
-    <p class="mb-4">Phone: +91-XXXXXXXXXX</p>
-    <p class="mb-4">Email: <a href="mailto:chessacademy@example.com" class="underline">chessacademy@example.com</a></p>
-
-    <!-- Formspree Contact Form -->
-    <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded border border-gray-300" required>
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded border border-gray-300" required>
-      <textarea name="message" placeholder="Your Message" class="w-full p-3 rounded border border-gray-300" required></textarea>
-      <button type="submit" class="w-full bg-black text-white p-3 rounded hover:bg-gray-800 transition">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<footer class="bg-black text-white py-6 text-center border-t border-gray-700">
-  <p>&copy; 2025 Chess Academy | Contact: +91-XXXXXXXXXX</p>
-</footer>
-
+  <!-- Footer -->
+  <footer class="bg-black text-center p-4 mt-12 border-t border-gray-700">
+    <p>&copy; 2025 Chess Academy. All rights reserved.</p>
+  </footer>
 </body>
 </html>
