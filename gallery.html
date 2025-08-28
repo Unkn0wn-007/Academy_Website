@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Chess Academy</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Chess Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
-<body>
-<header>
-    <h1>Chess Academy</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<body class="bg-white text-black font-sans">
+
+<header class="flex justify-between items-center px-6 py-4 border-b border-gray-300">
+  <div class="flex items-center space-x-2">
+    <div class="w-12 h-12 bg-gray-300 flex items-center justify-center text-black font-bold">Logo</div>
+    <span class="text-xl font-semibold">Chess Academy</span>
+  </div>
+  <nav class="space-x-6">
+    <a href="index.html" class="hover:text-gray-500">Home</a>
+    <a href="gallery.html" class="hover:text-gray-500">Gallery</a>
+    <a href="achievements.html" class="hover:text-gray-500">Achievements</a>
+    <a href="contact.html" class="hover:text-gray-500">Contact</a>
+  </nav>
 </header>
 
-<!-- GALLERY SECTION -->
-<section class="gallery">
-    <h2>Photos & Videos</h2>
-    <div class="media-grid">
-        <!-- Replace with your own images/videos -->
-        <img src="images/photo1.jpg" alt="Tournament 1">
-        <img src="images/photo2.jpg" alt="Chess Class">
-        <video controls src="images/video1.mp4"></video>
-        <video controls src="images/video2.mp4"></video>
-    </div>
+<section class="max-w-6xl mx-auto py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Photos & Videos</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <!-- Lightbox Image -->
+    <a href="images/photo1.jpg" class="glightbox">
+      <img src="images/photo1.jpg" alt="Tournament 1" class="w-full rounded shadow hover:scale-105 transition">
+    </a>
+    
+    <a href="images/photo2.jpg" class="glightbox">
+      <img src="images/photo2.jpg" alt="Chess Class" class="w-full rounded shadow hover:scale-105 transition">
+    </a>
+    
+    <!-- Lightbox Video -->
+    <a href="images/video1.mp4" class="glightbox" data-type="video">
+      <video class="w-full rounded shadow hover:scale-105 transition" src="images/video1.mp4" muted></video>
+    </a>
+    
+    <a href="images/video2.mp4" class="glightbox" data-type="video">
+      <video class="w-full rounded shadow hover:scale-105 transition" src="images/video2.mp4" muted></video>
+    </a>
+
+  </div>
 </section>
 
-<footer>
-    <p>&copy; 2025 Chess Academy | Contact: +91-XXXXXXXXXX</p>
+<footer class="bg-black text-white py-6 text-center border-t border-gray-700">
+  <p>&copy; 2025 Chess Academy | Contact: +91-XXXXXXXXXX</p>
 </footer>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+
 </body>
 </html>

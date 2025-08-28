@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements - Chess Academy</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements - Chess Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-    <h1>Chess Academy</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<body class="bg-white text-black font-sans">
+
+<header class="flex justify-between items-center px-6 py-4 border-b border-gray-300">
+  <div class="flex items-center space-x-2">
+    <div class="w-12 h-12 bg-gray-300 flex items-center justify-center text-black font-bold">Logo</div>
+    <span class="text-xl font-semibold">Chess Academy</span>
+  </div>
+  <nav class="space-x-6">
+    <a href="index.html" class="hover:text-gray-500">Home</a>
+    <a href="gallery.html" class="hover:text-gray-500">Gallery</a>
+    <a href="achievements.html" class="hover:text-gray-500">Achievements</a>
+    <a href="contact.html" class="hover:text-gray-500">Contact</a>
+  </nav>
 </header>
 
-<!-- ACHIEVEMENTS SECTION -->
-<section class="achievements">
-    <h2>Our Achievements</h2>
-    <ul>
-        <!-- Replace/add achievements here -->
-        <li>Won Regional Chess Tournament 2025</li>
-        <li>Students ranked in top 10 nationally</li>
-        <li>Organized 50+ successful monthly tournaments</li>
-        <li>Regular training camps by expert coaches</li>
-    </ul>
+<section class="max-w-6xl mx-auto py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Our Achievements</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Achievement Card -->
+    <div class="bg-gray-100 p-6 rounded shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300 text-center">
+      <img src="images/trophy1.jpg" alt="Trophy 1" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+      <h3 class="font-bold mb-2">Regional Tournament 2025</h3>
+      <p>Won first place in the regional chess tournament.</p>
+    </div>
+
+    <div class="bg-gray-100 p-6 rounded shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300 text-center">
+      <img src="images/trophy2.jpg" alt="Trophy 2" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+      <h3 class="font-bold mb-2">Top 10 National</h3>
+      <p>Students ranked in top 10 nationally.</p>
+    </div>
+
+    <div class="bg-gray-100 p-6 rounded shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300 text-center">
+      <img src="images/trophy3.jpg" alt="Trophy 3" class="mx-auto mb-4 w-24 h-24 object-cover rounded-full">
+      <h3 class="font-bold mb-2">Monthly Tournaments</h3>
+      <p>Organized 50+ successful monthly tournaments.</p>
+    </div>
+
+  </div>
 </section>
 
-<footer>
-    <p>&copy; 2025 Chess Academy | Contact: +91-XXXXXXXXXX</p>
+<footer class="bg-black text-white py-6 text-center border-t border-gray-700">
+  <p>&copy; 2025 Chess Academy | Contact: +91-XXXXXXXXXX</p>
 </footer>
+
 </body>
 </html>
