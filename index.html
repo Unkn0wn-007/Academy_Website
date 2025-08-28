@@ -51,19 +51,78 @@
     </p>
   </section>
 
-  <!-- Puzzle of the Day Section -->
-  <section id="puzzle" class="py-16 px-6 bg-black text-center">
-    <h2 class="text-3xl font-bold mb-6">♟ Puzzle of the Day</h2>
-    <p class="mb-4 text-gray-400">Can you find the winning move?</p>
-    <div class="flex justify-center">
-      <iframe src="https://lichess.org/training/daily" 
-              style="width:400px; height:500px; border:none; border-radius: 12px;">
-      </iframe>
-    </div>
-    <p class="mt-4 text-gray-500 text-sm">
-      Source: <a href="https://lichess.org" target="_blank" class="underline">lichess.org</a>
-    </p>
-  </section>
+ <!-- Puzzle of the Day Section -->
+<section id="puzzle" class="py-16 bg-black text-center text-white">
+  <h2 class="text-3xl font-bold mb-6">♟ Puzzle of the Day</h2>
+  <p class="mb-6 text-gray-400">Try solving today’s challenge right here!</p>
+
+  <!-- Puzzle Board -->
+  <div id="board" class="mx-auto" style="width: 400px"></div>
+
+  <p id="puzzle-status" class="mt-4 text-gray-400"></p>
+
+  <p class="mt-6 text-gray-500 text-sm">
+    Source: <a href="https://lichess.org" target="_blank" class="underline">lichess.org</a>
+  </p>
+</section>
+
+<!-- Chessboard.js & Chess.js Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+
+<script>
+  // Create chess game logic
+  let game = new Chess();
+  let board = null;
+  let solution = [];
+  let moveIndex = 0;
+
+  // Fetch daily puzzle from Lichess API
+  fetch("https://lichess.org/api/puzzle/daily")
+    .then(res => res.json())
+    .then(data => {
+      let fen = data.game.fen;
+      solution = data.puzzle.solution; // Solution moves in SAN notation
+      game.load(fen);
+
+      // Initialize board
+      board = Chessboard('board', {
+        draggable: true,
+        position: fen,
+        onDrop: onDrop
+      });
+
+      document.getElementById("puzzle-status").innerText = 
+        "Your turn! Find the best move...";
+    });
+
+  // Handle piece drop
+  function onDrop(source, target) {
+    let move = game.move({
+      from: source,
+      to: target,
+      promotion: "q" // auto promote to queen
+    });
+
+    if (move === null) return "snapback"; // illegal move
+
+    // Check if move is correct
+    if (move.san === solution[moveIndex]) {
+      moveIndex++;
+      if (moveIndex === solution.length) {
+        document.getElementById("puzzle-status").innerText = "✅ Correct! Puzzle Solved!";
+      } else {
+        document.getElementById("puzzle-status").innerText = "✅ Good move! Continue...";
+      }
+    } else {
+      document.getElementById("puzzle-status").innerText = "❌ Wrong move. Try again!";
+      game.undo(); // undo wrong move
+      board.position(game.fen());
+    }
+  }
+</script>
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 px-6 bg-gray-900 text-center">
