@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess Academy - Home</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDO-US Chess Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<!-- Navbar -->
-<header>
-  <div class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="logo">
-      <!-- Replace 'logo.jpg' with your actual logo file name -->
-      <img src="logo.jpg" alt="Academy Logo">
-      <span>Our Chess Academy</span>
+      <!-- Replace logo.png with your logo -->
+      <img src="images/logo.png" alt="Academy Logo">
+      <span>INDO-US Chess Academy</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="lecturers.html">Lecturers</a></li>
-        <li><a href="guest_lecturers.html">Guest Lecturers</a></li>
-        <li><a href="camps.html">Camps</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<!-- Hero Section -->
-<section class="section-white" style="background-image: url('images/your-bg-image.jpg'); background-size: cover; background-position: center;">
-  <div style="background-color: rgba(0,0,0,0.6); padding: 4rem; border-radius: 1rem;">
-    <h1>Welcome to Our Chess Academy</h1>
-    <p>Training Future Champions ♟️</p>
-    <a href="contact.html" class="button mt-4">Join Us</a>
-  </div>
-</section>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<!-- Footer -->
-<footer>
-  &copy; 2025 Chess Academy. All rights reserved.
-</footer>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lecturers.html">Lecturers</a></li>
+      <li><a href="guest_lecturers.html">Guests</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('images/chess-bg.jpg');">
+    <h1>Welcome to INDO-US Chess Academy</h1>
+    <p>Master the game of strategy and skill</p>
+  </header>
+
+  <!-- Content -->
+  <section class="content">
+    <h2>About Us</h2>
+    <p>We train students of all levels, conduct regular tournaments, and celebrate excellence through coaching and guest lectures.</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

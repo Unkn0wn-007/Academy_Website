@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess Academy - Contact</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - INDO-US Chess Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<header>
-  <div class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="logo">
-      <!-- Replace 'logo.jpg' with your actual logo file name -->
-      <img src="logo.jpg" alt="Academy Logo">
-      <span>Our Chess Academy</span>
+      <img src="images/logo.png" alt="Academy Logo">
+      <span>INDO-US Chess Academy</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="lecturers.html">Lecturers</a></li>
-        <li><a href="guest_lecturers.html">Guest Lecturers</a></li>
-        <li><a href="camps.html">Camps</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lecturers.html">Lecturers</a></li>
+      <li><a href="guest_lecturers.html">Guests</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
+  <section class="content">
+    <h2>Contact Us</h2>
+    <p>For inquiries, training, or tournaments, reach us on WhatsApp:</p>
+    <a href="https://wa.me/919876543210" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp Contact" style="width:50px;">
+    </a>
+  </section>
 
-<section class="section-white">
-  <h2>Contact Us</h2>
-  <p>Reach out directly via WhatsApp</p>
-  <a href="https://wa.me/919876543210" target="_blank" class="button" style="display:inline-flex;align-items:center;gap:0.5rem;">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:24px;height:24px;">
-    Chat on WhatsApp
-  </a>
-</section>
-
-<footer>
-  &copy; 2025 Chess Academy. All rights reserved.
-</footer>
-
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

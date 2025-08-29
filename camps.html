@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess Academy - Camps</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camps - INDO-US Chess Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<header>
-  <div class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="logo">
-      <!-- Replace 'logo.jpg' with your actual logo file name -->
-      <img src="logo.jpg" alt="Academy Logo">
-      <span>Our Chess Academy</span>
+      <img src="images/logo.png" alt="Academy Logo">
+      <span>INDO-US Chess Academy</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="lecturers.html">Lecturers</a></li>
-        <li><a href="guest_lecturers.html">Guest Lecturers</a></li>
-        <li><a href="camps.html">Camps</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lecturers.html">Lecturers</a></li>
+      <li><a href="guest_lecturers.html">Guests</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="section-black">
-  <h2>Camps & Workshops</h2>
-  <p>Exclusive training sessions by masters and grandmasters</p>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-    <div class="card card-white">
-      <img src="images/camp1.jpg" alt="Camp 1" class="rounded-img" style="width:250px;height:150px;">
-      <h3>Summer Camp</h3>
-      <p>June 10-15, 2025</p>
-      <p>Coach: GM John Doe</p>
-      <a href="#" class="button">Register</a>
+  <section class="content">
+    <h2>Upcoming & Past Camps</h2>
+    <div class="grid">
+      <div>
+        <img src="images/camp1.jpg" alt="Camp 1">
+        <p>Summer Training Camp 2025</p>
+      </div>
+      <div>
+        <img src="images/camp2.jpg" alt="Camp 2">
+        <p>Winter Chess Camp 2024</p>
+      </div>
     </div>
-    <div class="card card-black">
-      <img src="images/camp2.jpg" alt="Camp 2" class="rounded-img" style="width:250px;height:150px;">
-      <h3>Winter Workshop</h3>
-      <p>Dec 5-10, 2025</p>
-      <p>Coach: IM Jane Smith</p>
-      <a href="#" class="button">Register</a>
-    </div>
-    <div class="card card-white">
-      <img src="images/camp3.jpg" alt="Camp 3" class="rounded-img" style="width:250px;height:150px;">
-      <h3>Tactical Bootcamp</h3>
-      <p>Aug 15-20, 2025</p>
-      <p>Coach: FM Alex Lee</p>
-      <a href="#" class="button">Register</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  &copy; 2025 Chess Academy. All rights reserved.
-</footer>
-
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

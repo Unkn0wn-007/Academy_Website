@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chess Academy - Gallery</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - INDO-US Chess Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<header>
-  <div class="navbar">
+  <nav class="navbar">
     <div class="logo">
-      <!-- Replace 'logo.jpg' with your actual logo file name -->
-      <img src="logo.jpg" alt="Academy Logo">
-      <span>Our Chess Academy</span>
+      <img src="images/logo.png" alt="Academy Logo">
+      <span>INDO-US Chess Academy</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="lecturers.html">Lecturers</a></li>
-        <li><a href="guest_lecturers.html">Guest Lecturers</a></li>
-        <li><a href="camps.html">Camps</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lecturers.html">Lecturers</a></li>
+      <li><a href="guest_lecturers.html">Guests</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section class="section-black">
-  <h2>Gallery</h2>
-  <p>Our Monthly Winners & FIDE Rated Players</p>
-  <div style="display:flex; flex-wrap:wrap; justify-content:center;">
-    <div class="card card-white">Junior Winner</div>
-    <div class="card card-black">Intermediate Winner</div>
-    <div class="card card-white">Advanced Winner</div>
-  </div>
-</section>
+  <section class="content">
+    <h2>Monthly Winners</h2>
+    <div class="grid">
+      <img src="images/winner1.jpg" alt="Winner 1">
+      <img src="images/winner2.jpg" alt="Winner 2">
+    </div>
 
-<footer>
-  &copy; 2025 Chess Academy. All rights reserved.
-</footer>
+    <h2>Latest FIDE Rated Players</h2>
+    <div class="grid">
+      <img src="images/fide1.jpg" alt="FIDE Player 1">
+      <img src="images/fide2.jpg" alt="FIDE Player 2">
+    </div>
+  </section>
 
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
