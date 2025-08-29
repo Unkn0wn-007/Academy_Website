@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chess Academy - Gallery</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Academy - Gallery</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Navbar -->
-<header class="navbar p-6 flex justify-between items-center fixed w-full z-10 bg-black bg-opacity-80">
-  <div class="text-2xl font-bold">LOGO HERE</div>
+<header class="navbar">
+  <div class="logo font-bold text-xl">LOGO HERE</div>
   <nav>
-    <ul class="flex gap-6">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="lecturers.html">Lecturers</a></li>
-      <li><a href="guest.html">Guest Lecturers</a></li>
-      <li><a href="camps.html">Camps</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="lecturers.html">Lecturers</a>
+    <a href="guest.html">Guest Lecturers</a>
+    <a href="camps.html">Camps</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section class="py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-6">Gallery</h2>
-  <p class="text-gray-400 mb-8">Our Monthly Winners and FIDE Rated Players</p>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    <div class="card">Winner - Junior Category</div>
-    <div class="card">Winner - Intermediate Category</div>
-    <div class="card">Winner - Advanced Category</div>
+<section class="section-black">
+  <h2>Gallery</h2>
+  <p>Our Monthly Winners & FIDE Rated Players</p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center;">
+    <div class="card card-white">Junior Winner</div>
+    <div class="card card-black">Intermediate Winner</div>
+    <div class="card card-white">Advanced Winner</div>
   </div>
 </section>
 
-<footer class="py-6 bg-black text-center text-gray-500">
+<footer>
   &copy; 2025 Chess Academy. All rights reserved.
 </footer>
 

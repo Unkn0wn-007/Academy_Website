@@ -1,84 +1,110 @@
-/* ===== GLOBAL STYLES ===== */
+/* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #000; /* default black background */
+    color: #fff; /* default white text */
 }
 
-/* ===== HEADER ===== */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-header nav a {
+.navbar a {
     color: #fff;
-    margin: 0 15px;
+    margin-left: 1rem;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.navbar a:hover, .navbar a.active {
+    color: #000;
+    background-color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-    /* Replace hero.jpg with your own image */
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-/* ===== SECTIONS ===== */
+/* Sections */
 section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* ===== GALLERY GRID ===== */
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 15px;
-}
-
-.media-grid img, .media-grid video {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* ===== FOOTER ===== */
-footer {
+    padding: 6rem 2rem 4rem 2rem;
     text-align: center;
-    background: #333;
+}
+
+.section-black {
+    background-color: #000;
     color: #fff;
-    padding: 15px 0;
 }
 
-/* ===== CONTACT FORM ===== */
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.section-white {
+    background-color: #fff;
+    color: #000;
 }
 
-form button {
-    padding: 10px 20px;
-    background: #333;
+/* Headings */
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 { font-size: 3rem; margin-bottom: 1rem; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+/* Cards */
+.card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    margin: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card backgrounds alternate */
+.card-black { background-color: #000; color: #fff; }
+.card-white { background-color: #fff; color: #000; }
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #fff;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-form button:hover {
-    background: #555;
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+/* Rounded images */
+.rounded-img {
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
 }
