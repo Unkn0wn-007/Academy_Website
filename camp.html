@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Academy - Camps</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar p-6 flex justify-between items-center fixed w-full z-10 bg-black bg-opacity-80">
+  <div class="text-2xl font-bold">LOGO HERE</div>
+  <nav>
+    <ul class="flex gap-6">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="lecturers.html">Lecturers</a></li>
+      <li><a href="guest.html">Guest Lecturers</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Camps & Workshops</h2>
+  <p class="text-gray-400 mb-8">Exclusive training sessions conducted by visiting masters</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- ===== Camp Card Template =====
+      Copy this block for each new camp.
+      Replace:
+        - campX.jpg with your camp image
+        - Camp Title
+        - Date
+        - Coach Name
+        - Focus / Details
+        - Registration Link (optional)
+    ================================ -->
+    <div class="card">
+      <img src="images/camp1.jpg" alt="Camp 1" class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">Summer Camp 2025</h3>
+      <p class="text-gray-400 mt-1">Date: June 10-15, 2025</p>
+      <p class="text-gray-400 mt-1">Coach: GM John Doe</p>
+      <p class="text-gray-400 mt-1">Focus: Attack & Defense</p>
+      <a href="#" class="mt-3 inline-block bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 transition">Register</a>
+    </div>
+
+    <div class="card">
+      <img src="images/camp2.jpg" alt="Camp 2" class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">Winter Workshop</h3>
+      <p class="text-gray-400 mt-1">Date: December 5-10, 2025</p>
+      <p class="text-gray-400 mt-1">Coach: IM Jane Smith</p>
+      <p class="text-gray-400 mt-1">Focus: Endgames</p>
+      <a href="#" class="mt-3 inline-block bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 transition">Register</a>
+    </div>
+
+    <div class="card">
+      <img src="images/camp3.jpg" alt="Camp 3" class="w-full h-40 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">Tactical Bootcamp</h3>
+      <p class="text-gray-400 mt-1">Date: August 15-20, 2025</p>
+      <p class="text-gray-400 mt-1">Coach: FM Alex Lee</p>
+      <p class="text-gray-400 mt-1">Focus: Tactical Vision</p>
+      <a href="#" class="mt-3 inline-block bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 transition">Register</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="py-6 bg-black text-center text-gray-500">
+  &copy; 2025 Chess Academy. All rights reserved.
+</footer>
+
+</body>
+</html>
