@@ -9,24 +9,33 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <!-- Replace logo.png with your logo -->
-      <img src="images/logo.png" alt="Academy Logo">
-      <span>INDO-US Chess Academy</span>
-    </div>
+<nav>
+  <div class="logo">
+    <img src="images/logo.png" alt="Academy Logo">
+    <span>INDO-US Chess Academy</span>
+  </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="lecturers.html">Lecturers</a></li>
-      <li><a href="guest_lecturers.html">Guests</a></li>
-      <li><a href="camps.html">Camps</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="lecturers.html">Lecturers</a></li>
+    <li><a href="guests.html">Guests</a></li>
+    <li><a href="camps.html">Camps</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
+  }
+</script>
+
+
 
   <!-- Hero Section -->
   <header class="hero" style="background-image: url('images/chess-bg.jpg');">

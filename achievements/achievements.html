@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements - INDO-US Chess Academy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+ <nav>
+  <div class="logo">
+    <img src="images/logo.png" alt="Academy Logo">
+    <span>INDO-US Chess Academy</span>
+  </div>
+
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="lecturers.html">Lecturers</a></li>
+    <li><a href="guests.html">Guests</a></li>
+    <li><a href="camps.html">Camps</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
+  }
+</script>
+
+
+  <!-- Achievements Section -->
+  <section class="achievements">
+    <h1>Our Achievements</h1>
+    <p>We are proud of our students’ successes in tournaments and rated events.</p>
+
+    <div class="achievement-gallery">
+      <div class="achievement-card">
+        <img src="images/achievement1.jpg" alt="Achievement 1">
+        <h3>National School Champion 2024</h3>
+        <p>Won by our under-15 student in Delhi.</p>
+      </div>
+
+      <div class="achievement-card">
+        <img src="images/achievement2.jpg" alt="Achievement 2">
+        <h3>FIDE Rating Milestone</h3>
+        <p>10+ academy students crossed the 1500+ rating mark in 2024.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
